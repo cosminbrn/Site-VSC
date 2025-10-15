@@ -1,0 +1,21 @@
+.contact {
+  padding: 2.25rem 1rem;
+  background: #2b2b2b;
+  color: #ffffff;
+
+  &__inner { max-width: 900px; margin: 0 auto; text-align: left; }
+
+  &__form {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+
+    label { display: flex; flex-direction: column; font-weight: 500; }
+
+    input, textarea {
+      margin-top: 0.5rem; padding: 0.5rem; border-radius: 6px; border: 1px solid rgba(43,43,43,0.9); background: white;
+    }
+
+    .contact__actions { display: flex; gap: 0.75rem; margin-top: 0.5rem; }
+  }
+}
