@@ -11,7 +11,7 @@ function Footer() {
                 <div className="footer__col">
                     <h4 className="footer__col-title">VSC</h4>
                     <p className="footer__col-text">
-                        High-quality PVC windows and doors with professional installation.
+                        PVC și aluminiu de calitate superioară pentru confort și eficiență energetică.
                     </p>
                 </div>
 
@@ -19,10 +19,9 @@ function Footer() {
                 <div className="footer__col">
                     <h4 className="footer__col-title">Sari La</h4>
                     <ul className="footer__list">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about">Despre Noi</a></li>
+                        <li><a href="#services">Servicii</a></li>
+                        <li><a href="#contact">Contactați-ne</a></li>
                     </ul>
                 </div>
 
