@@ -10,6 +10,13 @@
   /* --- THIS IS THE NEW PART --- */
   clip-path: ellipse(120% 100% at 50% 100%);
   
+  &__content {
+    display: flex;
+    flex-direction: column; /* stack title, subtitle and actions vertically */
+    align-items: center; /* center horizontally */
+    text-align: center; /* center text inside children */
+    gap: 1rem;
+  }
 
   &__inner {
     //max-width: 900px;
@@ -19,34 +26,69 @@
   }
 
   &__title {
-    font-family: 'Playfair Display', serif;
     font-size: 3.2rem;
     line-height: 1.1;
     margin: 0 0 1.5rem 0;
-    font-weight: 400;
-
+    font-weight: bold;
+    text-align: center;
   }
 
   &__subtitle {
+    flex: 1 1 auto;
+    display: flex;
     color: #2b2b2b;
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
-    margin-left: vw;
+    /* removed invalid "margin-left: vw;" */
     max-width: 60ch;
     font-size: 1.1rem;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
-
+  
+  /* actions */
   &__actions {
-    margin-top: 1.5rem;
+    flex: 0 0 auto;
+    margin-top: 0; /* remove extra offset */
+    align-self: center; /* center horizontally in stacked layout */
     display: flex;
-    gap: 1.5rem;
-    justify-content: center;
+    flex-wrap: wrap; /* allow items to wrap into two rows if needed */
+    flex-direction: row;
+    gap: 0.75rem;
+    justify-content: center; /* center action items horizontally */
+    align-items: center;
+    width: auto;
+
+    .hero__phone {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-right: 1rem;
+    }
+
+    .hero__email {
+      margin-left: 1rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
   }
 
-}
+  @media (max-width: 900px) {
+    .hero__title { font-size: 2.1rem; }
 
-@media (max-width: 900px) {
-  .hero__title { font-size: 2.1rem; }
+    /* on narrow viewports, center and place buttons side-by-side if desired */
+    .hero__content {
+      /* already stacked by default, just adjust spacing for small screens */
+      gap: 0.75rem;
+    }
+
+    .hero__actions {
+      align-items: center;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+      align-self: auto; /* ensure normal flow */
+      margin-top: 1.5rem; /* spacing below subtitle when stacked */
+    }
+  }
 }

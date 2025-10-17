@@ -5,16 +5,16 @@ const About: React.FC = () => {
   return (
     <section id="about" className="about">
       <div className="about__inner">
-        <h1>About Our Firm</h1>
+        <h1>Despre firmă</h1>
         <p>
-          Established in 2010, Site-VSC specializes in PVC windows, doors, and custom fittings.
-          Our team focuses on durable materials, energy efficiency, and clear communication from
-          quote to completion.
+          Înființată în 20XX, VSC se specializează în PVC Salamander și instalații de rulouri exterioare
+          pentru rezidențiale și comerciale. Cu o echipă experimentată, oferim soluții personalizate
+          care combină calitatea materialelor cu măiestria instalării.
         </p>
         <p>
-          We work with homeowners and commercial clients across the region. Projects range from
-          single-window replacements to full storefront installations — each handled with care
-          and local expertise.
+          Colaborăm cu proprietari de locuințe și clienți comerciali din întreaga regiune. Proiectele variază de la
+          înlocuiri de feronerie la instalații complete de vitrine — fiecare gestionat cu grijă
+          și expertiză locală.
         </p>
       </div>
     </section>

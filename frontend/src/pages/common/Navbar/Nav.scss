@@ -1,0 +1,168 @@
+.navbar {
+  width: 100%; // Use 100% to avoid potential horizontal scrollbars
+  position: relative;
+  z-index: 40;
+  background-color: #2b2b2b;
+
+  & .nav__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  & .nav__brand a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  // --- 1. RENAMED a key class ---
+  // The JSX uses 'nav__links-desktop', so we match that here.
+  // This is the main fix for the horizontal layout.
+  & .nav__links-desktop {
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+  }
+
+  // General style for all links
+  & .nav__link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  // --- 2. ADDED all the missing dropdown styles ---
+
+  // The container for the button and the dropdown list
+  & .nav__item {
+    position: relative; // This is the anchor for the absolute dropdown
+  }
+
+  // The button that opens the dropdown
+  & .nav__link--button {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.7); // Styled to match your image
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  // The '▾' arrow
+  & .nav__chev {
+    transition: transform 0.3s ease;
+  }
+
+  // Rotates the arrow when the dropdown is open
+  & .nav__item--open .nav__chev {
+    transform: rotate(180deg);
+  }
+
+  // The actual dropdown menu (the <ul>)
+  & .nav__dropdown {
+    position: absolute;
+    top: calc(100% + 10px); // Position below the button with a small gap
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem;
+    background-color: #3a3a3a;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: max-content; // Dropdown width fits the content
+
+    // --- Logic to hide/show the dropdown ---
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+
+    & a {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: #ffffff; // A blue color like your image
+      border-radius: 4px;
+
+      &:hover {
+        background-color: #4a4a4a;
+        color: #fff;
+      }
+    }
+  }
+  
+  // When the parent has the '--open' class, the dropdown becomes visible
+  & .nav__item--open .nav__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  // --- 3. UPDATED mobile styles ---
+
+  // The hamburger toggle button
+  & .nav__toggle {
+    display: none; // Hidden on desktop
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 50;
+  }
+
+  // The slide-down menu on mobile
+  & .nav__menu-mobile {
+    position: absolute;
+    top: 100%; // Position it right below the navbar
+    left: 0;
+    width: 100%;
+    background-color: #2b2b2b;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+    border-top: 1px solid #444;
+
+    & .nav__link {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    
+    // Indent the submenu items for clarity
+    & a[href^="/"] {
+      padding-left: 2rem;
+      opacity: 0.8;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+// Media query to switch between desktop and mobile views
+@media (max-width: 900px) {
+  // Hide the desktop links container
+  .navbar .nav__links-desktop {
+    display: none;
+  }
+  // Show the mobile hamburger button
+  .navbar .nav__toggle {
+    display: inline-flex;
+  }
+}

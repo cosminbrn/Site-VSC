@@ -5,15 +5,18 @@ const Hero: React.FC = () => {
   return (
     <section className="hero">
       <div className="hero__inner">
-        <h1 className="hero__title">Reliable PVC Installations for Your Home & Business</h1>
-        <p className="hero__subtitle">
-          We deliver high-quality windows and doors with fast turnaround, professional installation,
-          and a 5-year workmanship warranty. Trusted by local homeowners and businesses.
-        </p>
-        {/* <div className="hero__actions">
-          <a className="btn btn--primary" href="#contact">Request a Quote</a>
-          <a className="btn btn--ghost" href="#services">Our Services</a>
-        </div> */}
+        <h1 className="hero__title">Instalații PVC pentru casa ta</h1>
+
+        {/* moved subtitle and actions into a horizontal container */}
+        <div className="hero__content">
+          <p className="hero__subtitle">
+            Venim la dumeavoastră cu soluții personalizate pentru instalații PVC, asigurând calitate și durabilitate pentru fiecare proiect. De la consultanță până la instalare, suntem partenerul de încredere pentru nevoile dumneavoastră.
+          </p>
+          <div className="hero__actions">
+            <div className="hero__phone">+40 744 130 916</div>
+            <div className="hero__email">sebcosrl@gmail.com</div>
+          </div>
+        </div>
       </div>
     </section>
   )

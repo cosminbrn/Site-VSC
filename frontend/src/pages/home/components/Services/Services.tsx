@@ -3,15 +3,15 @@ import './Services.scss'
 
 const Services: React.FC = () => {
   const items = [
-    { title: 'Window Replacement', desc: 'Energy-efficient PVC windows with professional fitting.' },
-    { title: 'Door Installation', desc: 'Secure and insulated doors tailored to your property.' },
-    { title: 'Commercial Projects', desc: 'Large scale storefront and office glazing solutions.' },
+    { title: 'Înlocuirea feronerie', desc: 'Feronerii PVC eficiente din punct de vedere energetic, cu montaj profesional.' },
+    { title: 'Montare uși și ferestre', desc: 'Uși și ferestre securizate și izolate, adaptate proprietății dumneavoastră.' },
+    { title: 'Rulouri', desc: 'Rulouri manuale sau automate pentru orice doriți.' },
   ]
 
   return (
     <section id="services" className="services">
       <div className="services__inner">
-        <h1>Our Services</h1>
+        <h1>Serviciile noastre</h1>
         <ul className="services__list">
           {items.map((it) => (
             <li key={it.title} className="services__item">
