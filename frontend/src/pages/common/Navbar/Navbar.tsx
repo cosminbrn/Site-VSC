@@ -46,9 +46,12 @@ function Nav() {
 
             <ul className="nav__dropdown">
               {/* Am unificat Feronerie si PVC in pagina de Ferestre momentan */}
-              <li><Link to="/ferestre-usi">Ferestre și Uși PVC</Link></li>
-              <li><Link to="/rulouri">Rulouri Exterioare</Link></li>
-              <li><Link to="/accesorii">Accesorii & Feronerie</Link></li>
+              <li><Link to="/ferestre-usi">Tâmplărie PVC</Link></li>
+              <li><Link to="/ferestre-usi">Glisante Aluminiu</Link></li>
+              <li><Link to="/rulouri">Rulouri Aluminiu</Link></li>
+              <li><Link to="/ferestre-usi">Uși Garaj tip Rulou</Link></li>
+              <li><Link to="/accesorii">Plase Insecte</Link></li>
+              <li><Link to="/ferestre-usi">Paneluri</Link></li>
             </ul>
           </div>
 

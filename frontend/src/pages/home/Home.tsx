@@ -8,6 +8,7 @@ import Services from './components/Services/Services'
 import Contact from './components/Contact/Contact'
 import Carousel from '../common/Carousel/Carousel'
 import Grid from './components/Grid/Grid';
+import Photo1 from '../../assets/landing-carousel-001.jpeg'
 
 const homeSlides = [
   {
