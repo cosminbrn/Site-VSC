@@ -22,16 +22,14 @@ function IconClose() {
 }
 
 function Nav() {
-  // State for the main mobile menu (hamburger)
   const [open, setOpen] = useState(false);
-  // State for the desktop dropdown submenu
   const [submenuOpen, setSubmenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
       <div className="nav__inner">
         <div className="nav__brand">
-          <a href="/">VSC Construct</a>
+          <Link to="/">VSC Construct</Link> 
         </div>
 
         {/* --- DESKTOP LINKS --- */}
@@ -39,45 +37,39 @@ function Nav() {
           <div className={`nav__item ${submenuOpen ? "nav__item--open" : ""}`}>
             <button
               className="nav__link nav__link--button"
-              aria-haspopup="true"
-              aria-expanded={submenuOpen}
               onClick={() => setSubmenuOpen((s) => !s)}
-              // This onBlur is a clever way to close the menu when you click away.
-              // It gives enough time for a click on a dropdown item to register.
               onBlur={() => setTimeout(() => setSubmenuOpen(false), 200)}
             >
-              Domenii de practică și produse
+              Produse
               <span className="nav__chev" aria-hidden>▾</span>
             </button>
 
-            <ul className="nav__dropdown" role="menu" aria-label="Domenii">
-              <li role="none"><a role="menuitem" href="/feronerie">Feronerie</a></li>
-              <li role="none"><a role="menuitem" href="/pvc">Uși și ferestre</a></li>
-              <li role="none"><a role="menuitem" href="/rulouri">Rulouri</a></li>
+            <ul className="nav__dropdown">
+              {/* Am unificat Feronerie si PVC in pagina de Ferestre momentan */}
+              <li><Link to="/ferestre-usi">Ferestre și Uși PVC</Link></li>
+              <li><Link to="/rulouri">Rulouri Exterioare</Link></li>
+              <li><Link to="/ferestre-usi">Accesorii & Feronerie</Link></li>
             </ul>
           </div>
 
-          <a className="nav__link" href="/#about">Despre noi</a>
-          <a className="nav__link" href="/#services">Servicii</a>
-          <a className="nav__link" href="/#contact">Contactați-ne</a>
+          <Link className="nav__link" to="/portofoliu">Portofoliu</Link>
+          <a className="nav__link" href="/#about">Despre noi</a> {/* Ancora ramane cu href pt scroll */}
+          <a className="nav__link" href="/#contact">Contact</a>
         </div>
 
-        {/* --- MOBILE TOGGLE BUTTON --- */}
-        <button className="nav__toggle" onClick={() => setOpen((o) => !o)} aria-label="Toggle menu" aria-expanded={open}>
+        {/* --- MOBILE TOGGLE --- */}
+        <button className="nav__toggle" onClick={() => setOpen((o) => !o)}>
           {open ? <IconClose /> : <IconMenu />}
         </button>
       </div>
 
-      {/* --- MOBILE MENU OVERLAY --- */}
+      {/* --- MOBILE MENU --- */}
       {open && (
         <div className="nav__menu-mobile">
-          <a className="nav__link" href="/#domains">Domenii de practică și produse</a>
-          <a className="nav__link" href="/ferestre">↳ Ferestre</a>
-          <a className="nav__link" href="/usi">↳ Uși</a>
-          <a className="nav__link" href="/accesorii">↳ Accesorii</a>
-          <a className="nav__link" href="/#about">Despre noi</a>
-          <a className="nav__link" href="/#services">Servicii</a>
-          <a className="nav__link" href="/#contact">Contactați-ne</a>
+          <Link className="nav__link" to="/ferestre-usi" onClick={() => setOpen(false)}>Ferestre și Uși</Link>
+          <Link className="nav__link" to="/rulouri" onClick={() => setOpen(false)}>Rulouri</Link>
+          <Link className="nav__link" to="/portofoliu" onClick={() => setOpen(false)}>Portofoliu</Link>
+          <a className="nav__link" href="/#contact" onClick={() => setOpen(false)}>Cere Ofertă</a>
         </div>
       )}
     </nav>

@@ -1,19 +1,18 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home/Home'
 import Rulouri from './pages/rulouri/Rulouri'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Ferestre from './pages/ferestre/Ferestre'     // Import nou
+import Portofoliu from './pages/portofoliu/Portofoliu' // Import nou
 import './App.scss'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rulouri" element={<Rulouri />} />
+        <Route path="/ferestre-usi" element={<Ferestre />} />
+        <Route path="/portofoliu" element={<Portofoliu />} />
       </Routes>
     </BrowserRouter>
   )
