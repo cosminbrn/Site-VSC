@@ -3,6 +3,11 @@
   color: #FFFFFF;
   background: #2b2b2b;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+
+  @media (max-width: 768px) {
+    // Changed 90% to 97% for a much flatter angle
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 97%, 0 100%);
+  }
   &__inner { max-width: 1100px; margin: 0 auto; text-align: left; }
 
   h1 {  }
