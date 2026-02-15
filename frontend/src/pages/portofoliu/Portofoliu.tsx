@@ -17,7 +17,7 @@ const Portofoliu = () => {
     <>
       <Navbar />
       <div className="portfolio-page">
-        <h1>Portofoliu Lucrări VBARPLAST</h1>
+        <h1>Portofoliu Lucrări VSC Construct</h1>
         <p className="subtitle">O selecție a proiectelor noastre recente din Dobrogea</p>
         
         <div className="gallery-grid">

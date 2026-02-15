@@ -3,6 +3,7 @@ import Home from './pages/home/Home'
 import Rulouri from './pages/rulouri/Rulouri'
 import Ferestre from './pages/ferestre/Ferestre'
 import Portofoliu from './pages/portofoliu/Portofoliu'
+import Accesorii from './pages/accesorii/Accesorii'
 import './App.scss'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/rulouri" element={<Rulouri />} />
         <Route path="/ferestre-usi" element={<Ferestre />} />
         <Route path="/portofoliu" element={<Portofoliu />} />
+        <Route path="/accesorii" element={<Accesorii />} />
       </Routes>
     </BrowserRouter>
   )

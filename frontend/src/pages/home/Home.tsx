@@ -7,6 +7,7 @@ import About from './components/About/About'
 import Services from './components/Services/Services'
 import Contact from './components/Contact/Contact'
 import Carousel from '../common/Carousel/Carousel'
+import Grid from './components/Grid/Grid';
 
 const homeSlides = [
   {
@@ -34,6 +35,7 @@ const Home: React.FC = () => {
 		<div className="Home">
 			<Navbar />
 			<Carousel slides={homeSlides} variant="full"/>
+			<Grid />
 			<Hero />
 			<main>
                 <About />

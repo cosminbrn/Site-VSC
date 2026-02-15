@@ -48,7 +48,7 @@ function Nav() {
               {/* Am unificat Feronerie si PVC in pagina de Ferestre momentan */}
               <li><Link to="/ferestre-usi">Ferestre și Uși PVC</Link></li>
               <li><Link to="/rulouri">Rulouri Exterioare</Link></li>
-              <li><Link to="/ferestre-usi">Accesorii & Feronerie</Link></li>
+              <li><Link to="/accesorii">Accesorii & Feronerie</Link></li>
             </ul>
           </div>
 
@@ -69,7 +69,7 @@ function Nav() {
           <Link className="nav__link" to="/ferestre-usi" onClick={() => setOpen(false)}>Ferestre și Uși</Link>
           <Link className="nav__link" to="/rulouri" onClick={() => setOpen(false)}>Rulouri</Link>
           <Link className="nav__link" to="/portofoliu" onClick={() => setOpen(false)}>Portofoliu</Link>
-          <a className="nav__link" href="/#contact" onClick={() => setOpen(false)}>Cere Ofertă</a>
+          <Link className="nav__linK" to="/accesorii" onClick={() => setOpen(false)}>Accesorii</Link>
         </div>
       )}
     </nav>

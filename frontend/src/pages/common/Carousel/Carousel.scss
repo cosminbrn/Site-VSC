@@ -36,6 +36,11 @@
     background-size: cover;
     background-position: center;
     z-index: 1;
+    background-attachment: fixed;
+    @media (max-width: 1024px), (hover: none) {
+      background-attachment: scroll;
+      background-position: center center;;
+    }
   }
 
   .overlay {
