@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home/Home'
 import Rulouri from './pages/rulouri/Rulouri'
-import Ferestre from './pages/ferestre/Ferestre'     // Import nou
-import Portofoliu from './pages/portofoliu/Portofoliu' // Import nou
+import Ferestre from './pages/ferestre/Ferestre'
+import Portofoliu from './pages/portofoliu/Portofoliu'
 import './App.scss'
 
 function App() {

@@ -7,7 +7,7 @@ const Auto: React.FC = () => {
         <section className="auto">
             <div className="auto__inner">
 
-                {/* --- 2. Added text wrapper --- */}
+
                 <div className="auto__text">
                     <h1>Rulouri automate</h1>
                     <p>
@@ -19,7 +19,6 @@ const Auto: React.FC = () => {
                     </p>
                 </div>
 
-                {/* --- 3. Added image wrapper --- */}
                 <div className="auto__image">
                     <img src={rulouriImage} alt="Rulouri automate instalate pe o locuință" />
                 </div>

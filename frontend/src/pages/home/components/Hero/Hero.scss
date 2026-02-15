@@ -7,14 +7,14 @@
   flex-direction: column;
   align-items: center;
 
-  /* --- THIS IS THE NEW PART --- */
+
   clip-path: ellipse(120% 100% at 50% 100%);
   
   &__content {
     display: flex;
-    flex-direction: column; /* stack title, subtitle and actions vertically */
-    align-items: center; /* center horizontally */
-    text-align: center; /* center text inside children */
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
     gap: 1rem;
   }
 
@@ -39,7 +39,7 @@
     color: #2b2b2b;
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
-    /* removed invalid "margin-left: vw;" */
+
     max-width: 60ch;
     font-size: 1.1rem;
     align-items: center;
@@ -47,16 +47,16 @@
     text-align: center;
   }
   
-  /* actions */
+
   &__actions {
     flex: 0 0 auto;
-    margin-top: 0; /* remove extra offset */
-    align-self: center; /* center horizontally in stacked layout */
+    margin-top: 0;
+    align-self: center;
     display: flex;
-    flex-wrap: wrap; /* allow items to wrap into two rows if needed */
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 0.75rem;
-    justify-content: center; /* center action items horizontally */
+    justify-content: center;
     align-items: center;
     width: auto;
 
@@ -76,9 +76,8 @@
   @media (max-width: 900px) {
     .hero__title { font-size: 2.1rem; }
 
-    /* on narrow viewports, center and place buttons side-by-side if desired */
+
     .hero__content {
-      /* already stacked by default, just adjust spacing for small screens */
       gap: 0.75rem;
     }
 
@@ -87,8 +86,8 @@
       flex-direction: row;
       width: 100%;
       justify-content: center;
-      align-self: auto; /* ensure normal flow */
-      margin-top: 1.5rem; /* spacing below subtitle when stacked */
+      align-self: auto;
+      margin-top: 1.5rem;
     }
   }
 }

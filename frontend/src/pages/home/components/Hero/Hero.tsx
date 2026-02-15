@@ -7,7 +7,6 @@ const Hero: React.FC = () => {
       <div className="hero__inner">
         <h1 className="hero__title">Instalații PVC pentru casa ta</h1>
 
-        {/* moved subtitle and actions into a horizontal container */}
         <div className="hero__content">
           <p className="hero__subtitle">
             Venim la dumeavoastră cu soluții personalizate pentru instalații PVC, asigurând calitate și durabilitate pentru fiecare proiect. De la consultanță până la instalare, suntem partenerul de încredere pentru nevoile dumneavoastră.

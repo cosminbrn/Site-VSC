@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
       .then((result) => {
           console.log(result.text);
           setStatus('success');
-          form.current?.reset(); // Golim formularul după trimitere
+          form.current?.reset();
       }, (error) => {
           console.log(error.text);
           setStatus('error');

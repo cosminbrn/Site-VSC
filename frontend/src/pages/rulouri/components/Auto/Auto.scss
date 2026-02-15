@@ -9,49 +9,47 @@
     max-width: 1100px; 
     margin: 0 auto; 
     
-    // --- New styles for 2-column layout ---
+
     display: grid;
-    grid-template-columns: 1fr 1fr; // Creates two equal columns
-    align-items: center;           // Vertically centers the content in each column
-    gap: 2rem;                   // Adds space between the text and image
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
   }
 
-  // --- New wrapper for your text ---
+
   &__text {
-    text-align: left; // Keeps your original text alignment
+    text-align: left;
   }
 
-  // --- New wrapper for your image ---
+
   &__image {
     & img {
-      width: 100%;       // Makes the image responsive
-      height: auto;      // Maintains aspect ratio
-      display: block;    // Removes extra bottom spacing
-      border-radius: 8px; // Optional: adds a nice soft corner
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
     }
   }
 
-  h1 { 
-    // You can add h1 styles here
-  }
+
   p { 
     margin-bottom: 0.75rem; 
     color: rgba(43, 43, 43, 0.9); 
   }
 
-  // --- Adds responsive stacking for mobile ---
+
   @media (max-width: 768px) {
-    // Adjust padding and clip-path for a better mobile look
+
     padding: 3rem 1rem 4rem;
     clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
 
     &__inner {
-      grid-template-columns: 1fr; // Stacks to a single column
+      grid-template-columns: 1fr;
       gap: 1.5rem;
     }
 
     &__text {
-      text-align: center; // Center text on mobile (optional, but often looks good)
+      text-align: center;
     }
   }
 }

@@ -4,21 +4,19 @@ $text: #2b2b2b;
 $muted: #6b5f57;
 
 .footer {
-  background: $beige-100; // Simplified background for a cleaner look
+  background: $beige-100;
   color: $text;
-  padding: 6rem 1rem 2rem 1rem; // Increased top padding for the clip-path
+  padding: 6rem 1rem 2rem 1rem;
   border-top: 1px solid rgba(43, 43, 43, 0.04);
   margin-top: 2rem;
-  position: relative; // Needed for the clip-path to work well with layout
+  position: relative;
   
-  // A more subtle clip-path for a professional feel
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
 
   &__inner {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    // Creates responsive columns that wrap automatically
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     padding: 0 1rem;
@@ -90,7 +88,6 @@ $muted: #6b5f57;
   }
 }
 
-// Responsive adjustments
 @media (max-width: 640px) {
   .footer__bottom {
     flex-direction: column;
