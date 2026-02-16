@@ -1,19 +1,80 @@
 .suprapuse {
-	padding: 2.5rem 1rem;
-	color: #FFFFFF;
-	background: #2b2b2b;
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  padding: 4rem 1rem; // Mai mult spațiu vertical
+  color: #FFFFFF;
+  background: #2b2b2b;
+  // Clip-path tăia puțin din conținut dacă imaginea era mare, 
+  // l-am ajustat puțin sau îl putem păstra pe cel vechi
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  margin-bottom: 2rem; // Spațiu după secțiune datorită clip-path-ului
 
-	&__inner { max-width: 1100px; margin: 0 auto; text-align: right; }
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; // Centrează vertical textul față de imagine
+    justify-content: space-between;
+    gap: 4rem; // Spațiu între text și imagine
 
-		p { margin-bottom: 0.75rem; color: rgba(255,255,255,0.9); }
+    // Pe mobil le punem una sub alta
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+  }
 
-	&__image {
-    & img {
+  &__content {
+    flex: 1; // Ocupă spațiu egal
+    text-align: left; // Arată mai bine aliniat la stânga lângă imagine
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    
+    // Pe mobil centrăm lista
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+
+    li {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &__image {
+    flex: 1; // Ocupă spațiu egal cu textul
+    display: flex;
+    justify-content: center;
+
+    img {
       width: 100%;
+      max-width: 500px; // Asigură că nu devine niciodată prea mare
       height: auto;
       display: block;
-      border-radius: 8px;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); // Umbră pentru profunzime
+      object-fit: cover;
     }
   }
 }

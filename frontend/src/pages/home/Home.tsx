@@ -39,10 +39,10 @@ const Home: React.FC = () => {
 			<Grid />
 			<Hero />
 			<main>
-                <About />
+          <About />
 			    <Services />
 			    <Contact />
-            </main>
+      </main>
 			<Footer />
 		</div>
 	)
